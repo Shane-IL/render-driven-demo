@@ -56,7 +56,20 @@ const IntroSection = () => (
           </p>
         </div>
       </div>
+      <div className="bg-surface0 p-6 rounded-lg border border-surface1">
+        <h3 className="text-xl font-semibold text-text mb-4">
+         Want to look under the hood?
+        </h3>
+        <div className="space-y-4 text-subtext0">
+          <p>
+           Have a look through the code for this page here, it's all RDR based:
+          </p>
+          <a href='https://github.com/Shane-IL/render-driven-demo' target="_blank" className='text-mauve'>https://github.com/Shane-IL/render-driven-demo</a>
+        </div>
+      </div>
     </div>
   );
   
   export default IntroSection;
+
+  //https://shane-il.github.io/render-driven-demo/
