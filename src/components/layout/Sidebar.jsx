@@ -14,12 +14,12 @@ const Sidebar = () => {
         </h1>
       </div>
       
-      <nav className="space-y-2">
+      <nav className="space-y-2 text-center">
         {SECTIONS.map(({ id, title, icon: Icon, description }) => (
           <button
             key={id}
             onClick={() => setCurrentSection(id)}
-            className={`max-w-full text-left p-2 rounded flex items-center ${
+            className={`${sidebarExpanded ? 'w-full' : ''  } m-auto text-left p-2 rounded flex items-center ${
               currentSection === id 
                 ? 'bg-blue text-mantle' 
                 : 'hover:bg-surface0'

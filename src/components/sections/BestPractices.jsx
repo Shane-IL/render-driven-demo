@@ -1,4 +1,3 @@
-import { useAppStore } from '../../stores/appStore';
 import { PracticeCard } from '../ui';
 
 const BestPractices = () => {

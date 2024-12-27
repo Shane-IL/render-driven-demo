@@ -11,7 +11,7 @@ export const SECTIONS = [
     id: 'about',
     title: 'About RDR',
     icon: BookOpen,
-    description: 'Understanding Render-Driven Architecture'
+    description: 'What is RDR Architecture?'
   },
   {
     id: 'core-concepts',
