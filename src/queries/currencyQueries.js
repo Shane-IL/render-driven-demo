@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 
-const API_KEY = 'YOUR_API_KEY'; // We'll need to get one from exchangerate-api.com
+const API_KEY = import.meta.env.VITE_EXCHANGE_RATE_API_KEY;
 const BASE_URL = 'https://v6.exchangerate-api.com/v6';
 
 export function useAvailableCurrencies() {
@@ -9,7 +9,7 @@ export function useAvailableCurrencies() {
     queryFn: async () => {
       const response = await fetch(`${BASE_URL}/${API_KEY}/codes`);
       const data = await response.json();
-      return data.supported_codes; // Returns [["USD", "US Dollar"], ["EUR", "Euro"], ...]
+      return data.supported_codes;
     },
     staleTime: Infinity, // Currency list rarely changes
   });
