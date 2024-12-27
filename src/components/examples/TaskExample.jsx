@@ -1,5 +1,5 @@
-import { TaskItem, TaskInput, FilterButtons } from '../ui/tasks/TaskComponents';
 import { useTaskStore } from '../../stores/taskStore';
+import { TaskItem, TaskInput, FilterButtons } from '../ui/tasks/TaskComponents';
 
 const TaskList = () => {
   const { 

@@ -1,5 +1,37 @@
-import { useCurrencyStore } from '../../stores/currencyStore';
 import { useAvailableCurrencies, useExchangeRate } from '../../queries/currencyQueries';
+import { useCurrencyStore } from '../../stores/currencyStore';
+
+const AmountInput = ({ value, onChange }) => (
+    <div className="flex flex-col gap-2">
+      <label className="text-subtext0 text-sm">Amount</label>
+      <input
+        type="number"
+        min="0"
+        step="0.01"
+        value={value}
+        onChange={(e) => onChange(Number(e.target.value))}
+        className="p-2 rounded bg-surface0 border border-surface1 text-text"
+      />
+    </div>
+  );
+  
+  const ConversionResult = ({ amount, fromCurrency, toCurrency, rate }) => {
+    const convertedAmount = amount * rate;
+    
+    return (
+      <div className="p-4 rounded bg-surface0 border border-surface1">
+        <div className="text-2xl font-bold text-text">
+          {amount.toFixed(2)} {fromCurrency} =
+        </div>
+        <div className="text-3xl font-bold text-blue mt-2">
+          {convertedAmount.toFixed(2)} {toCurrency}
+        </div>
+        <div className="text-sm text-subtext0 mt-2">
+          1 {fromCurrency} = {rate.toFixed(6)} {toCurrency}
+        </div>
+      </div>
+    );
+  };
 
 const CurrencySelect = ({ value, onChange, currencies, label }) => (
   <div className="flex flex-col gap-2">
@@ -18,37 +50,6 @@ const CurrencySelect = ({ value, onChange, currencies, label }) => (
   </div>
 );
 
-const AmountInput = ({ value, onChange }) => (
-  <div className="flex flex-col gap-2">
-    <label className="text-subtext0 text-sm">Amount</label>
-    <input
-      type="number"
-      min="0"
-      step="0.01"
-      value={value}
-      onChange={(e) => onChange(Number(e.target.value))}
-      className="p-2 rounded bg-surface0 border border-surface1 text-text"
-    />
-  </div>
-);
-
-const ConversionResult = ({ amount, fromCurrency, toCurrency, rate }) => {
-  const convertedAmount = amount * rate;
-  
-  return (
-    <div className="p-4 rounded bg-surface0 border border-surface1">
-      <div className="text-2xl font-bold text-text">
-        {amount.toFixed(2)} {fromCurrency} =
-      </div>
-      <div className="text-3xl font-bold text-blue mt-2">
-        {convertedAmount.toFixed(2)} {toCurrency}
-      </div>
-      <div className="text-sm text-subtext0 mt-2">
-        1 {fromCurrency} = {rate.toFixed(6)} {toCurrency}
-      </div>
-    </div>
-  );
-};
 
 export const CurrencyExample = () => {
   const { 

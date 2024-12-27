@@ -1,5 +1,5 @@
-import { useAppStore } from '../../stores/appStore';
 import { SECTIONS } from '../../constants/navigation';
+import { useAppStore } from '../../stores/appStore';
 
 const Sidebar = () => {
   const { currentSection, setCurrentSection, sidebarExpanded } = useAppStore();

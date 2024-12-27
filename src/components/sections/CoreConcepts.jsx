@@ -84,11 +84,11 @@ const UserList = () => {
         <div className={`p-4 rounded-lg bg-slate-900`}>
           <div className="flex justify-between items-center text-slate-400">
             <div>Store</div>
-            <div>↓</div>
+            <div className='text-2xl'>→</div>
             <div>Props</div>
-            <div>↓</div>
-            <div>Render</div>
-            <div>↓</div>
+            <div className='text-2xl'>→</div>
+            <div >Render</div>
+            <div className='text-2xl'>→</div>
             <div>UI</div>
           </div>
         </div>

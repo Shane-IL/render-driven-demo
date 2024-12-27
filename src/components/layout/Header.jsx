@@ -1,4 +1,5 @@
 import { Menu } from 'lucide-react';
+
 import { useAppStore } from '../../stores/appStore';
 
 const Header = () => {

@@ -1,5 +1,5 @@
-import { useAppStore } from '../../stores/appStore';
 import { SECTIONS } from '../../constants/navigation';
+import { useAppStore } from '../../stores/appStore';
 import {
   Intro,
   About,

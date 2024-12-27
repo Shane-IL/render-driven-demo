@@ -1,8 +1,9 @@
+import { formatDistance } from 'date-fns';
+
 import { useDataTableStore } from '../../../stores/dataTableStore';
 import { TableFilters } from './TableFilters';
 import { TableHeader } from './TableHeader';
 import { TablePagination } from './TablePagination';
-import { formatDistance } from 'date-fns';
 
 export const DataTable = () => {
   const {
