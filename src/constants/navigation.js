@@ -1,9 +1,15 @@
-import { BookOpen, LayoutGrid, TestTube, LightbulbIcon } from 'lucide-react';
+import { BookOpen, LayoutGrid, TestTube, LightbulbIcon, Home } from 'lucide-react';
 
 export const SECTIONS = [
   {
     id: 'intro',
     title: 'Introduction',
+    icon: Home,
+    description: 'Why I created this guide'
+  },
+  {
+    id: 'about',
+    title: 'About RDR',
     icon: BookOpen,
     description: 'Understanding Render-Driven Architecture'
   },
